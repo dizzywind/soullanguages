@@ -184,21 +184,28 @@ PAGE_BODIES = {}
 # ── page contents ──────────────────────────────────────────
 def hero_block(title, subtitle, desc_lines, cta_label, cta_anchor):
     lines = ''.join(f'<p>{l}</p>' for l in (desc_lines if isinstance(desc_lines, list) else [desc_lines]))
-    return f"""<section class="hero" aria-labelledby="ht">
-<h1 id="ht">{title}</h1><p>{subtitle}</p>{lines}
-<a href="#{cta_anchor}" class="cta-btn">{cta_label} ↓</a></section>"""
+    return f"""<section class="hero animate-in">
+<span class="hero-icon">☸</span>
+<h1>{title}</h1><p class="subtitle">{subtitle}</p>
+<div class="gold-divider"></div>
+<a href="#{cta_anchor}" class="hero-cta">{cta_label} <span>↓</span></a></section>"""
 
 def eps_block(episodes):
+    """Episode card grid using new dark/gold design."""
     cards = ""
     for ep in episodes:
         t = ep["title"]
-        cards += (f'<article class="ep-card">'
-                  f'<img class="ep-thumb" src="{ep["thumb"]}" alt="{t["en"]}"'
-                  f' loading="lazy" data-video="{ep["yt"]}">'
-                  f'<div class="ep-body"><span class="ep-num">EP{ep["num"]}</span>'
-                  f'<p class="ep-title">{t["en"]}</p>'
-                  f'<p class="ep-sub">{t["zh"]}</p></div></article>\n')
-    return f'<section id="episodes" aria-labelledby="et"><h2 id="et" class="section-title">系列影片</h2><div class="episodes-grid" id="episodes-grid">{cards}</div></section>'
+        cards += (f'<article class="card">'
+                  f'<img class="card-img" src="{ep["thumb"]}" alt="{t["en"]}"'
+                  f' loading="lazy" data-video="{ep["yt"]}" style="background:linear-gradient(135deg,#2c241e,#1a1612)">'
+                  f'<div class="card-body"><span class="card-num">EP{ep["num"]:02d}</span>'
+                  f'<p class="card-title">{t["en"]}</p>'
+                  f'<p class="card-sub">{t["zh"]}</p></div></article>\n')
+    return (f'<section id="episodes" class="section animate-in">'
+            f'<div class="section-header"><h2 class="section-title">系列影片</h2>'
+            f'<div class="section-title-bar"></div></div>'
+            f'<p class="section-sub">探索靈語的奧秘、靈修的力量</p>'
+            f'<div class="card-grid">{cards}</div></section>')
 
 def zen(label, body):
     return f'<div class="zen-box"><p class="label">{label}</p><p>{body}</p></div>'
@@ -212,12 +219,12 @@ def build_page_body(page_id, pdata):
                  "想探索靈語的奧秘、靈修的力量、以及靈界的世界？"],
                 "觀看系列影片", "episodes")
             + eps_block(data["episodes"])
-            + '<section class="prose" aria-labelledby="intro"><h2 id="intro" class="section-title">關於靈語</h2>'
+            + '<section class="prose-section animate-in"><h2>關於靈語</h2>'
             + zen("靈語是什麼？","靈語是自然流露，不需要刻意學習。")
             + "<p>有人會說靈語，卻不明白自己在說什麼？<br>"
             + "想探索靈語的奧秘、靈修的力量、以及靈界的世界？<br>"
             + "<strong>是外靈在說話，還是你內在的本性</strong>？</p>"
-            + "<p>想了解更多，追蹤我們，並訂閱我們的 <strong>YouTube 頻道</strong>。</p>"
+            + '<p>想了解更多，追蹤我們，並訂閱我們的 <strong style="color:var(--c-gold)">YouTube 頻道</strong>。</p>'
             + "</section>"
         )
 
@@ -259,26 +266,28 @@ def nav_block(active):
     inner = "\n".join(f"        {x}" for x in items)
     return (f'<header class="site-header" role="banner"><div class="header-inner">'
             f'<a href="{pfx}index.html" class="logo">靈語<em>堂</em></a>'
-            f'<button class="mobile-nav-toggle" aria-label="選單" aria-expanded="false">☰</button>'
             f'<nav aria-label="主要導航"><ul class="nav-items" role="list">\n{inner}\n'
             f'</ul></nav>'
-            f'<button class="lang-toggle" aria-label="切換簡體中文">簡</button>'
-            f'<button id="theme-toggle" class="theme-toggle" aria-label="切換深色模式"></button>'
-            f'</div></header>')
+            f'<div class="header-actions">'
+            f'<button class="icon-btn lang-toggle" aria-label="切換簡體中文">簡</button>'
+            f'<button class="icon-btn theme-toggle" id="theme-toggle" aria-label="切換深色模式">🌙</button>'
+            f'</div></div></header>')
 
 def footer_(page_id="home"):
-    lightbox = ('<div id="lightbox" hidden role="dialog" aria-modal="true" aria-label="影片播放">'
+    lightbox = ('<div class="lightbox-overlay" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="影片播放">'
                 '<button id="lightbox-close" aria-label="關閉影片">✕</button>'
                 '<div id="lightbox-inner"></div></div>')
     js_path = "js/main.min.js" if page_id == "home" else "../js/main.min.js"
+    pfx = "" if page_id == "home" else "../"
     return (lightbox
-            + '<footer class="site-footer" role="contentinfo"><div class="footer-inner">'
-            '<nav aria-label="頁尾導航"><a href="index.html">主頁</a>'
-            '<a href="scriptures.html">經文與分享</a>'
-            '<a href="contact.html">聯絡我們</a>'
+            + '<footer class="site-footer" role="contentinfo">'
+            '<nav class="footer-nav">'
+            f'<a href="{pfx}index.html">主頁</a>'
+            f'<a href="{pfx}pages/scriptures.html">經文與分享</a>'
+            f'<a href="{pfx}pages/contact.html">聯絡我們</a>'
             '<a href="https://www.youtube.com/@soullanguages">YouTube</a></nav>'
             '<p class="copyright">© 2024 靈語堂 Soul Languages. All rights reserved.</p>'
-            f'</div></footer><script src="{js_path}" defer></script>')
+            f'</footer><script src="{js_path}" defer></script>')
 
 def head_html(page_id, title, desc):
     og_img = site.get("og_image","og-cover.jpg")
@@ -304,15 +313,19 @@ def head_html(page_id, title, desc):
             f'<meta name="twitter:title" content="{title}">'
             f'<meta name="twitter:description" content="{desc}">'
 '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
-'<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+TC:wght@400;600;700&family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">'
+'<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@400;600;700&display=swap" rel="stylesheet">'
             '<link rel="icon" href="data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 32 32\'><text y=\'28\' font-size=\'24\'>\u171E</text></svg>">'
-            f'<link rel="stylesheet" href="{rp}css/styles.css"><link rel="stylesheet" href="{rp}css/layout.css">'
+            f'<link rel="stylesheet" href="{rp}css/styles.css">'
             f'{ld_html}'
-            '</head><body>'
-            '<a href="#main" class="skip-link">跳至主要內容</a>')
+            '</head><body>')
 
 def make_html(page_id, title, desc, inner):
-    return head_html(page_id, title, desc) + nav_block(page_id) + inner + footer_(page_id) + "</body></html>"
+    """Assemble page: head + nav + (page-header for subpages) + body + footer."""
+    if page_id == "home":
+        return head_html(page_id, title, desc) + nav_block(page_id) + inner + footer_(page_id) + "</body></html>"
+    page_top = f'<section class="page-header animate-in"><h1>{title}</h1><p>{desc}</p></section><section class="prose-section animate-in">'
+    page_bot = '</section>'
+    return head_html(page_id, title, desc) + nav_block(page_id) + page_top + inner + page_bot + footer_(page_id) + "</body></html>"
 
 
 # ── Copy static assets ──────────────────────────────────────────
