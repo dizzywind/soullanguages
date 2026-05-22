@@ -147,9 +147,9 @@
 
   // ── 7. Event delegation for static episode cards ─────────────
   document.addEventListener("click", function (e) {
-    var card = e.target.closest ? e.target.closest(".ep-card") : null;
+    var card = e.target.closest ? e.target.closest(".card") : null;
     if (card) {
-      var thumb = card.querySelector(".ep-thumb");
+      var thumb = card.querySelector(".card-img");
       if (thumb && thumb.getAttribute("data-video")) {
         openVideo({ currentTarget: thumb });
       }
