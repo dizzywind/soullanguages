@@ -17,9 +17,9 @@ JS_DST  = DIST / "js"
 CSS_DST = DIST / "css"
 PAGES_DST = DIST / "pages"
 
-(DIST / "pages").mkdir(exist_ok=True)
-JS_DST.mkdir(exist_ok=True)
-CSS_DST.mkdir(exist_ok=True)
+(DIST / "pages").mkdir(parents=True, exist_ok=True)
+JS_DST.mkdir(parents=True, exist_ok=True)
+CSS_DST.mkdir(parents=True, exist_ok=True)
 
 # ── 0. Content validation ───────────────────────────────────────
 errors = []
