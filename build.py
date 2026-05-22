@@ -245,17 +245,20 @@ TARGET = {
 }
 
 def nav_block(active):
+    """Nav links with relative path prefix. Root pages use '', sub-pages use '../'."""
+    pfx = active != "home" and "../" or ""
     items = []
     for pid, zh in nav_items:
         cls = ' class="active-nav"' if pid == active else ''
         if pid == "home":
-            items.append(f'<li><a href="index.html"{cls}>{zh}</a></li>')
+            items.append(f'<li><a href="{pfx}index.html"{cls}>{zh}</a></li>')
         else:
             target = TARGET.get(pid, (pid, pid+".html"))
-            items.append(f'<li><a href="{target[1]}"{cls}>{zh}</a></li>')
+            href = f"pages/{target[1]}" if active == "home" else target[1]
+            items.append(f'<li><a href="{href}"{cls}>{zh}</a></li>')
     inner = "\n".join(f"        {x}" for x in items)
     return (f'<header class="site-header" role="banner"><div class="header-inner">'
-            f'<a href="index.html" class="logo">靈語<em>堂</em></a>'
+            f'<a href="{pfx}index.html" class="logo">靈語<em>堂</em></a>'
             f'<button class="mobile-nav-toggle" aria-label="選單" aria-expanded="false">☰</button>'
             f'<nav aria-label="主要導航"><ul class="nav-items" role="list">\n{inner}\n'
             f'</ul></nav>'
@@ -286,6 +289,7 @@ def head_html(page_id, title, desc):
         canonical = page_url + f"/pages/{page_id}.html"
     # Generate JSON-LD
     ld_html = json_ld(page_id, title, desc, site)
+    rp = "" if page_id == "home" else "../"
     return (f'<!DOCTYPE html><html lang="zh-Hant"><head>'
             '<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
             f'<title>{title}</title><meta name="description" content="{desc}">'
@@ -302,7 +306,7 @@ def head_html(page_id, title, desc):
 '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
 '<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+TC:wght@400;600;700&family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">'
             '<link rel="icon" href="data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 32 32\'><text y=\'28\' font-size=\'24\'>\u171E</text></svg>">'
-            '<link rel="stylesheet" href="../css/styles.css"><link rel="stylesheet" href="../css/layout.css">'
+            f'<link rel="stylesheet" href="{rp}css/styles.css"><link rel="stylesheet" href="{rp}css/layout.css">'
             f'{ld_html}'
             '</head><body>'
             '<a href="#main" class="skip-link">跳至主要內容</a>')
