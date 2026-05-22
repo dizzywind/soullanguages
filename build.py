@@ -8,7 +8,7 @@ Usage:
 
 import json, pathlib, sys, time, os, argparse
 
-PROJECT = pathlib.Path("/data/projects/soullanguages")
+PROJECT = pathlib.Path(__file__).parent.resolve()
 DIST    = PROJECT / "dist"
 DATA    = PROJECT / "data" / "content.json"
 JS_SRC  = PROJECT / "js"
