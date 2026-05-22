@@ -1,0 +1,17 @@
+{
+  "outputDirectory": "dist",
+  "rewrites": [
+    {
+      "source": "/data/(.*)",
+      "destination": "/dist/data/$1"
+    },
+    {
+      "source": "/(heart-sutra|scriptures|bodhicitta|ksitigarbha|tara|emptiness|mind-buddha|repentance|mind-buddha|bodhicitta|emptiness).html",
+      "destination": "/pages/$1.html"
+    },
+    {
+      "source": "/(downloads|contact).html",
+      "destination": "/pages/$1.html"
+    }
+  ]
+}
