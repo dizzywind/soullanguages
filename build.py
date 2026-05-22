@@ -317,6 +317,7 @@ def head_html(page_id, title, desc):
 '<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@400;600;700&display=swap" rel="stylesheet">'
             '<link rel="icon" href="data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 32 32\'><text y=\'28\' font-size=\'24\'>\u171E</text></svg>">'
             f'<link rel="stylesheet" href="{rp}css/styles.css">'
+            f'<script src="{rp}js/cc.min.js" defer></script>'
             f'{ld_html}'
             '</head><body>')
 

@@ -20,50 +20,21 @@
     });
   }
 
-  // ── 2. Language toggle (lazy-loads cc.min.js) ────────────────
+  // ── 2. Language toggle (SL_CC loaded via <script defer>) ─────
   var lt = document.querySelector(".lang-toggle");
-  var ccLoaded = false;
-  var pendingLang = null;
 
   if (lt) {
     lt.addEventListener("click", function () {
       var cur = localStorage.getItem("sl-lang") || "hant";
       var target = cur === "hant" ? "hans" : "hant";
-
-      if (ccLoaded && typeof SL_CC !== "undefined") {
-        applyLang(target);
-      } else if (!ccLoaded) {
-        pendingLang = target;
-        loadCCScripts();
-      }
+      applyLang(target);
     });
 
-    // Apply saved language on load if CC already loaded
+    // Apply saved language on load (SL_CC loaded via <script defer>)
     var savedLang = localStorage.getItem("sl-lang") || "hant";
-    if (savedLang === "hans" && typeof SL_CC !== "undefined") {
-      ccLoaded = true;
+    if (savedLang === "hans") {
       applyLang("hans");
     }
-  }
-
-  function loadCCScripts() {
-    // Load cc.min.js ~31KB — use path detection for pages/ subdirectory
-    var basePath = window.location.pathname.includes("/pages/")
-      ? "../js/cc.min.js"
-      : "js/cc.min.js";
-    var script = document.createElement("script");
-    script.src = basePath;
-    script.onload = function () {
-      ccLoaded = true;
-      if (pendingLang) {
-        applyLang(pendingLang);
-        pendingLang = null;
-      }
-    };
-    script.onerror = function () {
-      console.warn("Failed to load cc.min.js, language toggle unavailable");
-    };
-    document.body.appendChild(script);
   }
 
   function walkTextNodes(root, conv) {
