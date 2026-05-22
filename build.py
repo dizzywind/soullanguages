@@ -266,6 +266,7 @@ def nav_block(active):
     inner = "\n".join(f"        {x}" for x in items)
     return (f'<header class="site-header" role="banner"><div class="header-inner">'
             f'<a href="{pfx}index.html" class="logo">靈語<em>堂</em></a>'
+            f'<button class="mobile-nav-toggle" aria-label="選單" aria-expanded="false">☰</button>'
             f'<nav aria-label="主要導航"><ul class="nav-items" role="list">\n{inner}\n'
             f'</ul></nav>'
             f'<div class="header-actions">'
