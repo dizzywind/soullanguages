@@ -280,7 +280,17 @@ def footer_(page_id="home"):
                 '<div id="lightbox-inner"></div></div>')
     js_path = "js/main.min.js" if page_id == "home" else "../js/main.min.js"
     pfx = "" if page_id == "home" else "../"
+    particles = ''.join(
+        f'<div class="pollen {" ".join(cls)}" style="left:{l}%;animation-duration:{d}s;animation-delay:{a}s"></div>'
+        for l,d,a,cls in [
+            (10,18,0,[]),(25,22,0.5,['pollen-blue']),(40,16,1,[]),
+            (55,20,0.3,['pollen-lime']),(70,24,0.8,['pollen-blue']),
+            (85,17,1.5,[]),(15,19,2,['pollen-lime']),(50,21,0.1,[]),
+            (75,15,1.2,['pollen-blue']),(90,23,0.6,[]),
+        ]
+    )
     return (lightbox
+            + f'<div class="pollen-container">{particles}</div>'
             + '<footer class="site-footer" role="contentinfo">'
             '<nav class="footer-nav">'
             f'<a href="{pfx}index.html">主頁</a>'
