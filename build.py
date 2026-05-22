@@ -300,7 +300,7 @@ def head_html(page_id, title, desc):
     # Generate JSON-LD
     ld_html = json_ld(page_id, title, desc, site)
     rp = "" if page_id == "home" else "../"
-    return (f'<!DOCTYPE html><html lang="zh-Hant"><head>'
+    return (f'<!DOCTYPE html><html lang="zh"><head>'
             '<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
             f'<title>{title}</title><meta name="description" content="{desc}">'
             '<meta name="robots" content="index,follow">'
@@ -309,7 +309,7 @@ def head_html(page_id, title, desc):
             f'<meta property="og:description" content="{desc}">'
             '<meta property="og:type" content="website">'
             f'<meta property="og:url" content="{canonical}">'
-            f'<meta property="og:image" content="{og_img}"><meta property="og:locale" content="zh_TW">'
+            f'<meta property="og:image" content="{og_img}"><meta property="og:locale" content="zh">'
             '<meta name="twitter:card" content="summary_large_image">'
             f'<meta name="twitter:title" content="{title}">'
             f'<meta name="twitter:description" content="{desc}">'
