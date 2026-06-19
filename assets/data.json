@@ -1,0 +1,100 @@
+{
+  "images": [
+    {
+      "id": 1,
+      "theme": "fantasy",
+      "prompt": "Mystical fantasy mage portrait avatar, elegant hooded figure with glowing magical runes floating around head, deep purple and gold color palette, dramatic rim lighting, highly detailed digital painting, serene yet powerful atmosphere",
+      "url": "images/avatar_fantasy_20260618.jpg"
+    },
+    {
+      "id": 2,
+      "theme": "cyberpunk",
+      "prompt": "Cyberpunk portrait avatar, neon-lit face with circuit pattern glowing beneath skin, vibrant magenta and electric blue lighting, noir urban atmosphere, film grain texture, cinematic low key lighting, futuristic visor reflection",
+      "url": "images/avatar_cyberpunk_20260618.jpg"
+    },
+    {
+      "id": 3,
+      "theme": "minimalist",
+      "prompt": "Minimalist geometric portrait avatar, clean simple face constructed from basic geometric shapes, single continuous white lines on dark background, highly stylized flat design, vector art style, ultra clean crisp edges, black and gold accent colors",
+      "url": "images/avatar_minimalist_20260618.jpg"
+    },
+    {
+      "id": 4,
+      "theme": "nature",
+      "prompt": "Nature spirit portrait avatar, face intertwined with blooming flowers and living vines, lush green forest tones with warm golden sunlight filtering through leaves, soft natural daylight, organic flowing curves, serene peaceful expression, botanical illustration style",
+      "url": "images/avatar_nature_20260618.jpg"
+    },
+    {
+      "id": 5,
+      "theme": "retro",
+      "prompt": "Retro 80s synthwave portrait avatar, gradient background hot pink to deep purple, VHS scan lines, chrome geometric frames, warm sunset orange glow, analog film grain texture, neon pink blue cyan palette, aerial grid perspective, cassette tape futurism aesthetic",
+      "url": "images/avatar_retro_20260618.jpg"
+    },
+    {
+      "id": 6,
+      "theme": "futuristic",
+      "prompt": "Futuristic sci-fi portrait avatar, sleek metallic face with holographic UI elements floating around, cool silver and electric blue palette, clean sharp geometric design, volumetric rim lighting, centered composition emphasizing symmetry, sharp focus",
+      "url": "images/avatar_futuristic_20260618.jpg"
+    },
+    {
+      "id": 7,
+      "theme": "elegant",
+      "prompt": "Elegant portrait avatar, refined face with pearl and gold accents, soft warm lighting, oil painting style, high fashion editorial aesthetic, timeless beauty, graceful expression, luxurious feel",
+      "url": "images/avatar_elegant_20260618.jpg"
+    },
+    {
+      "id": 8,
+      "theme": "playful",
+      "prompt": "Playful whimsical portrait avatar, bright rainbow colors, fun expressive, kawaii cute, rounded shapes, pop art style, vibrant energetic cheerful colorful design",
+      "url": "images/avatar_playful_20260618.jpg"
+    },
+    {
+      "id": 9,
+      "theme": "dark",
+      "prompt": "Dark gothic portrait avatar, dramatic chiaroscuro lighting, deep shadows, moody atmosphere, black red silver palette, mysterious elegant, high contrast, film noir aesthetic, dramatic powerful presence",
+      "url": "images/avatar_dark_20260618.jpg"
+    },
+    {
+      "id": 10,
+      "theme": "pastel",
+      "prompt": "Pastel dreamy portrait avatar, soft lavender pink mint blue, gentle watercolor style, ethereal glow, light airy delicate serene, soft dreamy tones, calming peaceful aesthetic",
+      "url": "images/avatar_pastel_20260618.jpg"
+    },
+    {
+      "id": 11,
+      "theme": "inkwash",
+      "prompt": "Zen ink wash portrait avatar, Japanese sumi-e style brush strokes, minimalist black ink on white background, flowing expressive lines, meditative calm, traditional eastern art aesthetic, brush painting",
+      "url": "images/avatar_inkwash_20260618.jpg"
+    },
+    {
+      "id": 12,
+      "theme": "sacred",
+      "prompt": "Sacred geometry portrait avatar, mystical geometric patterns, glowing lines on dark background, spiritual symmetrical design, golden ratio composition, mystical mathematical beauty, tessellation patterns",
+      "url": "images/avatar_sacred_geometry_20260618.jpg"
+    },
+    {
+      "id": 13,
+      "theme": "glitch",
+      "prompt": "Glitch art portrait avatar, digital corruption effects, RGB split, neon cyber aesthetic, colorful noise, artistic distortion, futuristic digital art style, chromatic aberration, pixel sorting",
+      "url": "images/avatar_glitch_20260618.jpg"
+    },
+    {
+      "id": 14,
+      "theme": "celestial",
+      "prompt": "Cosmic celestial portrait avatar, starfield nebula galaxy, deep space purple blue silver palette, glowing stars, ethereal mystical astral design, cosmic wonder, infinite depth, stellar beauty",
+      "url": "images/avatar_celestial_20260618.jpg"
+    },
+    {
+      "id": 15,
+      "theme": "artdeco",
+      "prompt": "Art deco portrait avatar, 1920s geometric glamour, gold black palette, elegant symmetrical sunburst patterns, gilded luxurious vintage poster style, roaring twenties aesthetic, sophisticated opulence",
+      "url": "images/avatar_artdeco_20260618.jpg"
+    },
+    {
+      "id": 16,
+      "theme": "monochrome",
+      "prompt": "Dramatic monochrome portrait avatar, black and white high contrast, chiaroscuro lighting, film noir aesthetic, timeless elegant grainy texture, classic photography style, powerful striking simplicity",
+      "url": "images/avatar_monochrome_20260618.jpg"
+    }
+  ]
+}

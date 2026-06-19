@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoulLanguages Avatar Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="title">SoulLanguages Avatar Gallery</h1>
+            <p class="subtitle">16 themed AI-generated portraits</p>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section class="filter-section" aria-label="Theme filters">
+                <div class="filter-controls" role="group" aria-label="Filter by theme">
+                    <button class="filter-btn active" data-theme="all" aria-pressed="true">All</button>
+                </div>
+            </section>
+
+            <section class="gallery-section" aria-label="Avatar gallery">
+                <div class="gallery-grid" id="galleryGrid" role="list">
+                    <!-- Cards will be inserted here by JavaScript -->
+                </div>
+                <p class="no-results" id="noResults" hidden>No avatars found for this theme.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Generated with AI · <a href="https://github.com/dizzywind/soullanguages" target="_blank" rel="noopener">View on GitHub</a></p>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true" hidden>
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">×</button>
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">‹</button>
+        <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">›</button>
+        <div class="lightbox-content">
+            <img class="lightbox-image" id="lightboxImage" src="" alt="">
+            <div class="lightbox-info">
+                <h3 class="lightbox-theme" id="lightboxTheme"></h3>
+                <p class="lightbox-prompt" id="lightboxPrompt"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
