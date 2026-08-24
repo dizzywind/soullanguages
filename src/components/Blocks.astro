@@ -1,0 +1,47 @@
+---
+import type { Block } from '../data/site';
+
+interface Props {
+  blocks: Block[];
+  lang: string;
+}
+const { blocks, lang } = Astro.props;
+---
+
+{
+  blocks.map((b) => {
+    switch (b.t) {
+      case 'pair':
+        return (
+          <div class="line-pair" lang={lang}>
+            <span class="pinyin">{b.pinyin}</span>
+            <span class="hanzi">{b.hanzi}</span>
+          </div>
+        );
+      case 'mantra':
+        return (
+          <p class="mantra" lang={lang}>
+            {b.text}
+          </p>
+        );
+      case 'translit':
+        return <p class="translit">{b.text}</p>;
+      case 'p':
+        return <p>{b.text}</p>;
+      case 'heading':
+        return <h2 class="scripture-heading" lang={lang}>{b.text}</h2>;
+      case 'bullet':
+        return (
+          <p class="bullet" lang={lang}>
+            • {b.text}
+          </p>
+        );
+      default:
+        return (
+          <p class="para" lang={lang}>
+            {b.text}
+          </p>
+        );
+    }
+  })
+}

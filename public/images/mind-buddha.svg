@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800">
+  <rect width="1280" height="800" fill="#fbf9f4"/>
+  <rect x="40" y="40" width="1200" height="720" fill="none" stroke="#c4ad7f" stroke-width="2"/>
+  <rect x="56" y="56" width="1168" height="688" fill="none" stroke="#e4ddcc" stroke-width="1"/>
+  <g font-family="serif" fill="#34322c" text-anchor="middle">
+    <text x="640" y="330" font-size="150" letter-spacing="30">心佛頌</text>
+    <text x="640" y="430" font-size="34" fill="#a2824a">Mind Buddha Hymn</text>
+    <text x="640" y="700" font-size="22" fill="#9b9587">原稿書法圖片即將補上 · original calligraphy image pending</text>
+  </g>
+  <circle cx="640" cy="520" r="10" fill="#c4ad7f"/>
+</svg>

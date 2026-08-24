@@ -1,0 +1,359 @@
+{
+ "slug": "heart-sutra",
+ "order": 4,
+ "titles": {
+  "zh": "般若波羅蜜多心經",
+  "en": "Heart Sutra"
+ },
+ "pinyin_title": true,
+ "variants": {
+  "hant": {
+   "title_pinyin": "bō rě bō luó mì duō xīn jīng",
+   "blocks": [
+    {
+     "t": "pair",
+     "hanzi": "觀自在菩薩，",
+     "pinyin": "guān zì zài pú sà ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "行深般若波羅蜜多時，",
+     "pinyin": "xíng shēn bō rě bō luó mì duō shí ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "照見五蘊皆空，",
+     "pinyin": "zhào jiàn wǔ yùn jiē kōng ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "度一切苦厄。",
+     "pinyin": "dù yī qiē kǔ è 。"
+    },
+    {
+     "t": "pair",
+     "hanzi": "舍利子，",
+     "pinyin": "shè lì zǐ ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "色不異空，空不異色，",
+     "pinyin": "sè bù yì kōng ， kōng bù yì sè ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "色即是空，空即是色，",
+     "pinyin": "sè jí shì kōng ， kōng jí shì sè ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "受想行識，亦復如是。",
+     "pinyin": "shòu xiǎng xíng shí ， yì fù rú shì 。"
+    },
+    {
+     "t": "pair",
+     "hanzi": "舍利子，是諸法空相，",
+     "pinyin": "shè lì zǐ ， shì zhū fǎ kōng xiāng ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "不生不滅，不垢不淨，",
+     "pinyin": "bù shēng bù miè ， bù gòu bù jìng ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "不增不減。",
+     "pinyin": "bù zēng bù jiǎn 。"
+    },
+    {
+     "t": "pair",
+     "hanzi": "是故空中無色，無受想行識，",
+     "pinyin": "shì gù kōng zhōng wú sè ， wú shòu xiǎng xíng shí ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "無眼耳鼻舌身意，",
+     "pinyin": "wú yǎn ěr bí shé shēn yì ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "無色聲香味觸法，",
+     "pinyin": "wú sè shēng xiāng wèi chù fǎ ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "無眼界，乃至無意識界。",
+     "pinyin": "wú yǎn jiè ， nǎi zhì wú yì shí jiè 。"
+    },
+    {
+     "t": "pair",
+     "hanzi": "無無明，亦無無明盡，",
+     "pinyin": "wú wú míng ， yì wú wú míng jìn ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "乃至無老死，亦無老死盡。",
+     "pinyin": "nǎi zhì wú lǎo sǐ ， yì wú lǎo sǐ jìn 。"
+    },
+    {
+     "t": "pair",
+     "hanzi": "無苦集滅道，無智亦無得。",
+     "pinyin": "wú kǔ jí miè dào ， wú zhì yì wú dé 。"
+    },
+    {
+     "t": "pair",
+     "hanzi": "以無所得故，菩提薩埵，",
+     "pinyin": "yǐ wú suǒ dé gù ， pú tí sà duǒ ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "依般若波羅蜜多故，",
+     "pinyin": "yī bō rě bō luó mì duō gù ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "心無罣礙，無罣礙故，",
+     "pinyin": "xīn wú guà ài ， wú guà ài gù ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "無有恐怖，遠離顛倒夢想，",
+     "pinyin": "wú yǒu kǒng bù ， yuǎn lí diān dǎo mèng xiǎng ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "究竟涅槃。",
+     "pinyin": "jiū jìng niè pán 。"
+    },
+    {
+     "t": "pair",
+     "hanzi": "三世諸佛，依般若波羅蜜多故，",
+     "pinyin": "sān shì zhū fó ， yī bō rě bō luó mì duō gù ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "得阿耨多羅三藐三菩提。",
+     "pinyin": "dé ā nòu duō luó sān miǎo sān pú tí 。"
+    },
+    {
+     "t": "pair",
+     "hanzi": "故知般若波羅蜜多，",
+     "pinyin": "gù zhī bō rě bō luó mì duō ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "是大神咒，是大明咒，",
+     "pinyin": "shì dà shén zhòu ， shì dà míng zhòu ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "是無上咒，是無等等咒，",
+     "pinyin": "shì wú shàng zhòu ， shì wú děng děng zhòu ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "能除一切苦，真實不虛。",
+     "pinyin": "néng chú yī qiē kǔ ， zhēn shí bù xū 。"
+    },
+    {
+     "t": "pair",
+     "hanzi": "故說般若波羅蜜多咒，",
+     "pinyin": "gù shuō bō rě bō luó mì duō zhòu ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "即說咒曰：",
+     "pinyin": "jí shuō zhòu yuē ："
+    },
+    {
+     "t": "pair",
+     "hanzi": "揭諦揭諦，波羅揭諦，",
+     "pinyin": "jiē dì jiē dì ， bō luó jiē dì ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "波羅僧揭諦，菩提薩婆訶。",
+     "pinyin": "bō luó sēng jiē dì ， pú tí sà pó hē 。"
+    }
+   ]
+  },
+  "simp": {
+   "title_pinyin": "",
+   "blocks": [
+    {
+     "t": "heading",
+     "text": "般若波罗蜜多心经"
+    },
+    {
+     "t": "para",
+     "text": "bō rě bō luó mì duō xīn jīng"
+    },
+    {
+     "t": "pair",
+     "hanzi": "观自在菩萨，",
+     "pinyin": "guān zì zài pú sà ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "行深般若波罗蜜多时，",
+     "pinyin": "xíng shēn bō rě bō luó mì duō shí ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "照见五蕴皆空，",
+     "pinyin": "zhào jiàn wǔ yùn jiē kōng ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "度一切苦厄。",
+     "pinyin": "dù yī qiē kǔ è 。"
+    },
+    {
+     "t": "pair",
+     "hanzi": "舍利子，",
+     "pinyin": "shè lì zǐ ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "色不异空，空不异色，",
+     "pinyin": "sè bù yì kōng ， kōng bù yì sè ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "色即是空，空即是色，",
+     "pinyin": "sè jí shì kōng ， kōng jí shì sè ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "受想行识，亦复如是。",
+     "pinyin": "shòu xiǎng xíng shí ， yì fù rú shì 。"
+    },
+    {
+     "t": "pair",
+     "hanzi": "舍利子，是诸法空相，",
+     "pinyin": "shè lì zǐ ， shì zhū fǎ kōng xiāng ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "不生不灭，不垢不净，",
+     "pinyin": "bù shēng bù miè ， bù gòu bù jìng ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "不增不减。",
+     "pinyin": "bù zēng bù jiǎn 。"
+    },
+    {
+     "t": "pair",
+     "hanzi": "是故空中无色，无受想行识，",
+     "pinyin": "shì gù kōng zhōng wú sè ， wú shòu xiǎng xíng shí ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "无眼耳鼻舌身意，",
+     "pinyin": "wú yǎn ěr bí shé shēn yì ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "无色声香味触法，",
+     "pinyin": "wú sè shēng xiāng wèi chù fǎ ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "无眼界，乃至无意识界。",
+     "pinyin": "wú yǎn jiè ， nǎi zhì wú yì shí jiè 。"
+    },
+    {
+     "t": "pair",
+     "hanzi": "无无明，亦无无明尽，",
+     "pinyin": "wú wú míng ， yì wú wú míng jìn ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "乃至无老死，亦无老死尽。",
+     "pinyin": "nǎi zhì wú lǎo sǐ ， yì wú lǎo sǐ jìn 。"
+    },
+    {
+     "t": "pair",
+     "hanzi": "无苦集灭道，无智亦无得。",
+     "pinyin": "wú kǔ jí miè dào ， wú zhì yì wú dé 。"
+    },
+    {
+     "t": "pair",
+     "hanzi": "以无所得故，菩提薩埵，",
+     "pinyin": "yǐ wú suǒ dé gù ， pú tí sà duǒ ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "依般若波罗蜜多故，",
+     "pinyin": "yī bō rě bō luó mì duō gù ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "心无罣碍，无罣碍故，",
+     "pinyin": "xīn wú guà ài ， wú guà ài gù ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "无有恐怖，远离颠倒梦想，",
+     "pinyin": "wú yǒu kǒng bù ， yuǎn lí diān dǎo mèng xiǎng ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "究竟涅槃。",
+     "pinyin": "jiū jìng niè pán 。"
+    },
+    {
+     "t": "pair",
+     "hanzi": "三世诸佛，依般若波罗蜜多故，",
+     "pinyin": "sān shì zhū fó ， yī bō rě bō luó mì duō gù ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "得阿耨多罗三藐三菩提。",
+     "pinyin": "dé ā nòu duō luó sān miǎo sān pú tí 。"
+    },
+    {
+     "t": "pair",
+     "hanzi": "故知般若波罗蜜多，",
+     "pinyin": "gù zhī bō rě bō luó mì duō ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "是大神咒，是大明咒，",
+     "pinyin": "shì dà shén zhòu ， shì dà míng zhòu ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "是无上咒，是无等等咒，",
+     "pinyin": "shì wú shàng zhòu ， shì wú děng děng zhòu ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "能除一切苦，真实不虚。",
+     "pinyin": "néng chú yī qiē kǔ ， zhēn shí bù xū 。"
+    },
+    {
+     "t": "pair",
+     "hanzi": "故说般若波罗蜜多咒，",
+     "pinyin": "gù shuō bō rě bō luó mì duō zhòu ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "即说咒曰：",
+     "pinyin": "jí shuō zhòu yuē ："
+    },
+    {
+     "t": "pair",
+     "hanzi": "揭谛揭谛，波罗揭谛，",
+     "pinyin": "jiē dì jiē dì ， bō luó jiē dì ，"
+    },
+    {
+     "t": "pair",
+     "hanzi": "波罗僧揭谛，菩提萨婆訶。",
+     "pinyin": "bō luó sēng jiē dì ， pú tí sà pó hē 。"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,457 @@
+{
+ "slug": "ksitigarbha",
+ "order": 5,
+ "titles": {
+  "zh": "地藏菩薩本願經心要頌",
+  "en": "Ksitigarbha Essential Verses"
+ },
+ "pinyin_title": true,
+ "variants": {
+  "hant": {
+   "title_pinyin": "dì zàng pú sà běn yuàn jīng xīn yào sòng",
+   "blocks": [
+    {
+     "t": "pair",
+     "hanzi": "地藏菩薩 本願功德",
+     "pinyin": "dì zàng pú sà běn yuàn gōng dé"
+    },
+    {
+     "t": "pair",
+     "hanzi": "一心淨信 塑畫形像",
+     "pinyin": "yī xīn jìng xìn sù huà xíng xiàng"
+    },
+    {
+     "t": "pair",
+     "hanzi": "懺悔業障 瞻禮讚嘆",
+     "pinyin": "chàn huǐ yè zhàng zhān lǐ zàn tàn"
+    },
+    {
+     "t": "pair",
+     "hanzi": "至誠皈依 如經所說",
+     "pinyin": "zhì chéng guī yī rú jīng suǒ shuō"
+    },
+    {
+     "t": "pair",
+     "hanzi": "布施供養 先人離苦",
+     "pinyin": "bù shī gōng yǎng xiān rén lí kǔ"
+    },
+    {
+     "t": "pair",
+     "hanzi": "存者眷屬 增福除障",
+     "pinyin": "cún zhě juàn shǔ zēng fú chú zhàng"
+    },
+    {
+     "t": "pair",
+     "hanzi": "承佛咐囑 於此世界",
+     "pinyin": "chéng fó fù zhǔ yú cǐ shì jiè"
+    },
+    {
+     "t": "pair",
+     "hanzi": "至彌勒佛 已來眾生",
+     "pinyin": "zhì mí lè fó yǐ lái zhòng shēng"
+    },
+    {
+     "t": "pair",
+     "hanzi": "悉使解脫 永離諸苦",
+     "pinyin": "xī shǐ jiě tuō yǒng lí zhū kǔ"
+    },
+    {
+     "t": "pair",
+     "hanzi": "遇佛授記 以此因緣",
+     "pinyin": "yù fó shòu jì yǐ cǐ yīn yuán"
+    },
+    {
+     "t": "pair",
+     "hanzi": "為此世界 幽冥教主",
+     "pinyin": "wéi cǐ shì jiè yōu míng jiào zhǔ"
+    },
+    {
+     "t": "pair",
+     "hanzi": "娑婆本尊 念持聖號",
+     "pinyin": "suō pó běn zūn niàn chí shèng hào"
+    },
+    {
+     "t": "pair",
+     "hanzi": "業障消滅 三惡道苦",
+     "pinyin": "yè zhàng xiāo miè sān è dào kǔ"
+    },
+    {
+     "t": "pair",
+     "hanzi": "悉皆超脫 三善道眾",
+     "pinyin": "xī jiē chāo tuō sān shàn dào zhòng"
+    },
+    {
+     "t": "pair",
+     "hanzi": "增長善緣 圓證菩提",
+     "pinyin": "zēng zhǎng shàn yuán yuán zhèng pú tí"
+    },
+    {
+     "t": "pair",
+     "hanzi": "畢竟涅槃",
+     "pinyin": "bì jìng niè pán"
+    },
+    {
+     "t": "pair",
+     "hanzi": "若人欲了知 三世一切佛",
+     "pinyin": "ruò rén yù liǎo zhī sān shì yī qiē fó"
+    },
+    {
+     "t": "pair",
+     "hanzi": "應觀法界性 一切唯心造",
+     "pinyin": "yīng guān fǎ jiè xìng yī qiē wéi xīn zào"
+    },
+    {
+     "t": "pair",
+     "hanzi": "「南無幽冥教主娑婆世界",
+     "pinyin": "「na mo yōu míng jiào zhǔ suō pó shì jiè"
+    },
+    {
+     "t": "pair",
+     "hanzi": "本尊大願地藏王菩薩摩訶薩」",
+     "pinyin": "běn zūn dà yuàn dì zàng wáng pú sà mó hē sà」"
+    },
+    {
+     "t": "para",
+     "text": "（三稱）"
+    },
+    {
+     "t": "heading",
+     "text": "地藏菩薩贊"
+    },
+    {
+     "t": "para",
+     "text": "dì zàng pú sà zàn"
+    },
+    {
+     "t": "pair",
+     "hanzi": "稽首慈悲大教主",
+     "pinyin": "qǐ shǒu cí bēi dà jiào zhǔ"
+    },
+    {
+     "t": "pair",
+     "hanzi": "萬德洪名稱地藏",
+     "pinyin": "wàn dé hóng míng chēng dì zàng"
+    },
+    {
+     "t": "pair",
+     "hanzi": "誓願宏深無與等",
+     "pinyin": "shì yuàn hóng shēn wú yǔ děng"
+    },
+    {
+     "t": "pair",
+     "hanzi": "威德尊嚴更難量",
+     "pinyin": "wēi dé zūn yán gēng nán liáng"
+    },
+    {
+     "t": "pair",
+     "hanzi": "十方菩薩同皈命",
+     "pinyin": "shí fāng pú sà tóng guī mìng"
+    },
+    {
+     "t": "pair",
+     "hanzi": "三世諸佛共稱揚",
+     "pinyin": "sān shì zhū fó gòng chēng yáng"
+    },
+    {
+     "t": "pair",
+     "hanzi": "地獄未空不成佛",
+     "pinyin": "dì yù wèi kōng bù chéng fó"
+    },
+    {
+     "t": "pair",
+     "hanzi": "眾生度盡證覺皇",
+     "pinyin": "zhòng shēng dù jìn zhèng jué huáng"
+    },
+    {
+     "t": "pair",
+     "hanzi": "末法眾生無依怙",
+     "pinyin": "mò fǎ zhòng shēng wú yī hù"
+    },
+    {
+     "t": "pair",
+     "hanzi": "唯有大士駕慈航",
+     "pinyin": "wéi yǒu dà shì jià cí háng"
+    },
+    {
+     "t": "line",
+     "text": "*念完了以上幾輪，最後才念總迴向"
+    },
+    {
+     "t": "heading",
+     "text": "總迴向"
+    },
+    {
+     "t": "para",
+     "text": "zǒng huí xiàng"
+    },
+    {
+     "t": "pair",
+     "hanzi": "願以所修諸功德",
+     "pinyin": "yuàn yǐ suǒ xiū zhū gōng dé"
+    },
+    {
+     "t": "pair",
+     "hanzi": "速願福智二資糧",
+     "pinyin": "sù yuàn fú zhì èr zī liáng"
+    },
+    {
+     "t": "pair",
+     "hanzi": "我與法界諸眾生",
+     "pinyin": "wǒ yǔ fǎ jiè zhū zhòng shēng"
+    },
+    {
+     "t": "pair",
+     "hanzi": "同證無上正覺位",
+     "pinyin": "tóng zhèng wú shàng zhèng jué wèi"
+    },
+    {
+     "t": "pair",
+     "hanzi": "以此功德 上供下施",
+     "pinyin": "yǐ cǐ gōng dé shàng gōng xià shī"
+    },
+    {
+     "t": "pair",
+     "hanzi": "川流不息 行無緣慈",
+     "pinyin": "chuān liú bù xī xíng wú yuán cí"
+    },
+    {
+     "t": "pair",
+     "hanzi": "偏滿虛空 普周法界",
+     "pinyin": "piān mǎn xū kōng pǔ zhōu fǎ jiè"
+    },
+    {
+     "t": "pair",
+     "hanzi": "四聖六凡 圓融無礙",
+     "pinyin": "sì shèng liù fán yuán róng wú ài"
+    }
+   ]
+  },
+  "simp": {
+   "title_pinyin": "",
+   "blocks": [
+    {
+     "t": "heading",
+     "text": "地藏菩萨本愿经心要颂"
+    },
+    {
+     "t": "para",
+     "text": "dì zàng pú sà běn yuàn jīng xīn yào sòng"
+    },
+    {
+     "t": "pair",
+     "hanzi": "地藏菩萨 本愿功德",
+     "pinyin": "dì zàng pú sà běn yuàn gōng dé"
+    },
+    {
+     "t": "pair",
+     "hanzi": "一心净信 塑画形像",
+     "pinyin": "yī xīn jìng xìn sù huà xíng xiàng"
+    },
+    {
+     "t": "pair",
+     "hanzi": "忏悔业障 瞻礼赞叹",
+     "pinyin": "chàn huǐ yè zhàng zhān lǐ zàn tàn"
+    },
+    {
+     "t": "pair",
+     "hanzi": "至诚皈依 如经所说",
+     "pinyin": "zhì chéng guī yī rú jīng suǒ shuō"
+    },
+    {
+     "t": "pair",
+     "hanzi": "布施供养 先人离苦",
+     "pinyin": "bù shī gōng yǎng xiān rén lí kǔ"
+    },
+    {
+     "t": "pair",
+     "hanzi": "存者眷属 增福除障",
+     "pinyin": "cún zhě juàn shǔ zēng fú chú zhàng"
+    },
+    {
+     "t": "pair",
+     "hanzi": "承佛咐嘱 于此世界",
+     "pinyin": "chéng fó fù zhǔ yú cǐ shì jiè"
+    },
+    {
+     "t": "pair",
+     "hanzi": "至弥勒佛 已来众生",
+     "pinyin": "zhì mí lè fó yǐ lái zhòng shēng"
+    },
+    {
+     "t": "pair",
+     "hanzi": "悉使解脱 永离诸苦",
+     "pinyin": "xī shǐ jiě tuō yǒng lí zhū kǔ"
+    },
+    {
+     "t": "pair",
+     "hanzi": "遇佛授记 以此因缘",
+     "pinyin": "yù fó shòu jì yǐ cǐ yīn yuán"
+    },
+    {
+     "t": "pair",
+     "hanzi": "为此世界 幽冥教主",
+     "pinyin": "wéi cǐ shì jiè yōu míng jiào zhǔ"
+    },
+    {
+     "t": "pair",
+     "hanzi": "娑婆本尊 念持圣号",
+     "pinyin": "suō pó běn zūn niàn chí shèng hào"
+    },
+    {
+     "t": "pair",
+     "hanzi": "业障消灭 三恶道苦",
+     "pinyin": "yè zhàng xiāo miè sān è dào kǔ"
+    },
+    {
+     "t": "pair",
+     "hanzi": "悉皆超脱 三善道众",
+     "pinyin": "xī jiē chāo tuō sān shàn dào zhòng"
+    },
+    {
+     "t": "pair",
+     "hanzi": "增长善缘 圆证菩提",
+     "pinyin": "zēng zhǎng shàn yuán yuán zhèng pú tí"
+    },
+    {
+     "t": "pair",
+     "hanzi": "毕竟涅槃",
+     "pinyin": "bì jìng niè pán"
+    },
+    {
+     "t": "pair",
+     "hanzi": "若人欲了知 三世一切佛",
+     "pinyin": "ruò rén yù liǎo zhī sān shì yī qiē fó"
+    },
+    {
+     "t": "pair",
+     "hanzi": "应观法界性 一切唯心造",
+     "pinyin": "yīng guān fǎ jiè xìng yī qiē wéi xīn zào"
+    },
+    {
+     "t": "pair",
+     "hanzi": "「南无幽冥教主娑婆世界",
+     "pinyin": "「na mo yōu míng jiào zhǔ suō pó shì jiè"
+    },
+    {
+     "t": "pair",
+     "hanzi": "本尊大愿地藏王菩萨摩诃萨」",
+     "pinyin": "běn zūn dà yuàn dì zàng wáng pú sà mó hē sà」"
+    },
+    {
+     "t": "para",
+     "text": "（三称）"
+    },
+    {
+     "t": "heading",
+     "text": "地藏菩萨赞"
+    },
+    {
+     "t": "para",
+     "text": "dì zàng pú sà zàn"
+    },
+    {
+     "t": "pair",
+     "hanzi": "稽首慈悲大教主",
+     "pinyin": "qǐ shǒu cí bēi dà jiào zhǔ"
+    },
+    {
+     "t": "pair",
+     "hanzi": "万德洪名称地藏",
+     "pinyin": "wàn dé hóng míng chēng dì zàng"
+    },
+    {
+     "t": "pair",
+     "hanzi": "誓愿宏深无与等",
+     "pinyin": "shì yuàn hóng shēn wú yǔ děng"
+    },
+    {
+     "t": "pair",
+     "hanzi": "威德尊严更难量",
+     "pinyin": "wēi dé zūn yán gēng nán liáng"
+    },
+    {
+     "t": "pair",
+     "hanzi": "十方菩萨同皈命",
+     "pinyin": "shí fāng pú sà tóng guī mìng"
+    },
+    {
+     "t": "pair",
+     "hanzi": "三世诸佛共称扬",
+     "pinyin": "sān shì zhū fó gòng chēng yáng"
+    },
+    {
+     "t": "pair",
+     "hanzi": "地狱未空不成佛",
+     "pinyin": "dì yù wèi kōng bù chéng fó"
+    },
+    {
+     "t": "pair",
+     "hanzi": "众生度尽证觉皇",
+     "pinyin": "zhòng shēng dù jìn zhèng jué huáng"
+    },
+    {
+     "t": "pair",
+     "hanzi": "末法众生无依怙",
+     "pinyin": "mò fǎ zhòng shēng wú yī hù"
+    },
+    {
+     "t": "pair",
+     "hanzi": "唯有大士驾慈航",
+     "pinyin": "wéi yǒu dà shì jià cí háng"
+    },
+    {
+     "t": "line",
+     "text": "*念完了以上几轮，最后才念总回向"
+    },
+    {
+     "t": "heading",
+     "text": "总回向"
+    },
+    {
+     "t": "para",
+     "text": "zǒng huí xiàng"
+    },
+    {
+     "t": "pair",
+     "hanzi": "愿以所修诸功德",
+     "pinyin": "yuàn yǐ suǒ xiū zhū gōng dé"
+    },
+    {
+     "t": "pair",
+     "hanzi": "速愿福智二资粮",
+     "pinyin": "sù yuàn fú zhì èr zī liáng"
+    },
+    {
+     "t": "pair",
+     "hanzi": "我与法界诸众生",
+     "pinyin": "wǒ yǔ fǎ jiè zhū zhòng shēng"
+    },
+    {
+     "t": "pair",
+     "hanzi": "同证无上正觉位",
+     "pinyin": "tóng zhèng wú shàng zhèng jué wèi"
+    },
+    {
+     "t": "pair",
+     "hanzi": "以此功德 上供下施",
+     "pinyin": "yǐ cǐ gōng dé shàng gōng xià shī"
+    },
+    {
+     "t": "pair",
+     "hanzi": "川流不息 行无缘慈",
+     "pinyin": "chuān liú bù xī xíng wú yuán cí"
+    },
+    {
+     "t": "pair",
+     "hanzi": "偏满虚空 普周法界",
+     "pinyin": "piān mǎn xū kōng pǔ zhōu fǎ jiè"
+    },
+    {
+     "t": "pair",
+     "hanzi": "四圣六凡 圆融无碍",
+     "pinyin": "sì shèng liù fán yuán róng wú ài"
+    }
+   ]
+  }
+ }
+}

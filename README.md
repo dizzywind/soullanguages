@@ -1,128 +1,45 @@
-# Soul Languages — Static Rebuild
+# Soul Languages 靈語堂
 
-> soullanguages.com · 靈語堂
-> Built with: pure HTML/CSS/JS · zero dependencies · 47 KB total
+Bilingual (繁體中文 / English) static site for [soullanguages.com](https://www.soullanguages.com), migrated off Google Sites.
 
-## What's been built
+Built with [Astro](https://astro.build) — zero client-side framework, self-hosted fonts and assets, deployed to GitHub Pages at **https://dizzywind.github.io/soullanguages/**
 
-| Type | Count | Size |
-|------|-------|------|
-| HTML pages | 11 | 41.7 KB |
-| CSS (design tokens + layout) | 2 | 12 KB |
-| JavaScript (custom) | 1 | 3.6 KB |
-| sitemap.xml | 1 | 1.5 KB |
-| **Total** | **15 files** | **47 KB** |
-
----
-
-## Folder structure
+## Structure
 
 ```
-dist/
-├── index.html           ← homepage with episode grid
-├── robots.txt
-├── sitemap.xml
-├── css/
-│   ├── styles.css       ← design tokens, reset, layout
-│   └── layout.css       ← nav, hero, prose, lightbox, responsive
-├── js/
-│   └── main.min.js      ← dark-mode, episodes-JSON loader, video lightbox
-└── pages/
-    ├── scriptures.html
-    ├── repentance.html
-    ├── tara.html
-    ├── bodhicitta.html
-    ├── heart-sutra.html
-    ├── ksitigarbha.html
-    ├── emptiness.html
-    ├── mind-buddha.html
-    ├── downloads.html   ← stub — fill in real file links
-    └── contact.html     ← stub — fill in real email/contact info
+src/
+├── content/… via src/data/content/*.json   ← scripture texts, episodes, downloads
+├── data/site.ts            ← nav, UI strings, typed accessors
+├── layouts/BaseLayout.astro ← SEO (canonical/hreflang/OG), header, footer
+├── components/             ← Blocks renderer, EpisodeGrid (click-to-load YouTube), etc.
+└── pages/                  ← zh at root, en under /en/
 ```
 
----
+Content model: every sutra page carries its scraped variants — `hant` (繁體), `simp` (简体) and optional `en`. Line-level pinyin from the original site is preserved as `pair` blocks (Heart Sutra, Ksitigarbha). The Mind Buddha Hymn page is an image of the original calligraphy; a placeholder ships until the original is fetched (see below).
 
-## Audit vs old Google Sites site
+## Development
 
-| Area | Google Sites (old) | New build |
-|---|---|---|
-| HTML size | 136 KB | **41 KB (71% smaller)** |
-| Gzip | 34.5 KB | **3.6 KB (90% smaller)** |
-| Text/HTML ratio | 0.5% | **6%+** |
-| `lang` attr | `en-US` ❌ | `zh-Hant` ✅ |
-| `<meta description>` | ❌ absent | ✅ on every page |
-| `<h1>` | ❌ absent | ✅ on every page |
-| `canonical` | ❌ | ✅ |
-| YouTube `title` | ❌ 0/8 | ✅ lightbox iframes |
-| YouTube `loading="lazy"` | ❌ 0/8 | ✅ all lightbox iframes |
-| YouTube `width`/`height` | ❌ 0/8 | ✅ aspect-ratio CSS |
-| Security headers | ❌ all missing | ✅ set on host (not in HTML) |
-| Google Sites boilerplate | 18 KB inline CSS | ✅ 0 KB — gone |
-| Skip link | ✅ but hidden behind Google Sites | ✅ clean, native |
+Requires Node 22+.
 
----
+```bash
+npm install
+npm run dev        # http://localhost:4321/soullanguages/
+npm run build      # outputs dist/
+npm run preview
+```
 
-## Content that needs filling
+## Migration provenance
 
-These pages have stub content and need real text from the old site sections:
+`scripts/migration/` documents how content was produced:
 
-| Page | What to add |
-|---|---|
-| `pages/scriptures.html` | 經文與分享 section body |
-| `pages/repentance.html` | ✅ done |
-| `pages/tara.html` | ✅ done |
-| `pages/bodhicitta.html` | 發菩提心義訣 full text |
-| `pages/heart-sutra.html` | 心經 full text + annotations |
-| `pages/ksitigarbha.html` | 地藏菩薩本願經心要頌 |
-| `pages/emptiness.html` | 關於空性 essays |
-| `pages/mind-buddha.html` | 心佛頌 text + commentary |
-| `pages/downloads.html` | Actual download links + PDFs |
-| `pages/contact.html` | Real email / form action |
-
-Content can be pasted directly into the template in `pages/<id>.html` between the `<section class="prose">` tags — no special formatting needed.
-
----
+- `fetch.py`, `extract2.py` — scrape the live Google Sites into structured JSON
+- `migrate.py` — convert the scrape into `src/data/content/*.json` (no hand-typed scripture)
+- `verify-fidelity.py` — after build, asserts every live-site line appears verbatim in `dist/`
+- `fetch-original-images.sh` — downloads the few images still hosted on Google's CDN (blocked from some datacenter networks); run once from any normal connection
 
 ## Deploy
 
-**Option A — Netlify / Vercel (easiest)**
-```bash
-# Point the dist/ folder at your host
-netlify deploy --dir=dist --prod
-# or
-vercel --dist dist/ --prod
-```
+Push to `main` → GitHub Actions builds with `withastro/action` and publishes to GitHub Pages.
+Ensure *Settings ▸ Pages ▸ Source* is set to **GitHub Actions**.
 
-**Option B — Cloudflare Pages**
-1. Push this repo to GitHub
-2. Pages → "Direct upload" → upload `dist/` folder
-3. Custom domain: `soullanguages.com`
-
-**Option C — Any static host**
-`rsync dist/ user@host:/var/www/soullanguages/`
-
----
-
-## Project files
-
-```
-soullanguages/
-├── data/
-│   └── content.json     ← shared site data (nav, episodes, page metadata)
-├── css/
-│   ├── styles.css
-│   └── layout.css
-├── js/
-│   └── main.min.js
-├── build.py             ← rebuild script — python3 build.py
-├── dist/                ← static output — deploy this
-│   ├── index.html
-│   ├── robots.txt
-│   ├── sitemap.xml
-│   ├── js/main.min.js
-│   ├── css/styles.css
-│   ├── css/layout.css
-│   └── pages/
-├── assets/images/        ← add og-cover.jpg here before launch
-└── README.md
-```
+To use the custom domain later: add a `public/CNAME` file and point DNS at GitHub Pages.

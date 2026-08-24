@@ -1,0 +1,38 @@
+---
+import { site, t, lp, type Locale } from '../data/site';
+
+interface Props {
+  locale: Locale;
+  switchPath: string;
+}
+
+const { locale, switchPath } = Astro.props;
+const other: Locale = locale === 'zh' ? 'en' : 'zh';
+
+const current = Astro.url.pathname.replace(/\/$/, '');
+function isCurrent(href: string): boolean {
+  const target = lp(locale, href).replace(/\/$/, '');
+  if (href === '' ) return current === target;
+  return current.startsWith(target);
+}
+---
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href={lp(locale, '/')}>
+      <span class="brand-zh">{site.name.zh}</span>
+      <span class="brand-en">{site.name.en}</span>
+    </a>
+    <nav class="site-nav" aria-label={locale === 'zh' ? '主導覽' : 'Main'}>
+      <a href={lp(locale, '/')} aria-current={isCurrent('/') ? 'true' : undefined}>{locale === 'zh' ? '主頁' : 'Home'}</a>
+      <a href={lp(locale, '/sutras/')} aria-current={isCurrent('/sutras') ? 'true' : undefined}>{locale === 'zh' ? '經文與分享' : 'Sutras'}</a>
+      <a href={lp(locale, '/downloads/')} aria-current={isCurrent('/downloads') ? 'true' : undefined}>{locale === 'zh' ? '下載' : 'Downloads'}</a>
+      <a href={lp(locale, '/contact/')} aria-current={isCurrent('/contact') ? 'true' : undefined}>{locale === 'zh' ? '聯絡我們' : 'Contact'}</a>
+    </nav>
+    <div class="lang-switch">
+      <a href={lp(other, switchPath)} lang={other === 'en' ? 'en' : 'zh-Hant'} hreflang={other === 'en' ? 'en' : 'zh-Hant'}>
+        {other === 'en' ? 'English' : '中文'}
+      </a>
+    </div>
+  </div>
+</header>

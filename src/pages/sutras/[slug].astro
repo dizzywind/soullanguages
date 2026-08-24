@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Blocks from '../../components/Blocks.astro';
+import { sutras, ui, lp, sutraVariant, sutraHasScripts } from '../../data/site';
+
+export function getStaticPaths() {
+  return sutras.map((sutra) => ({ params: { slug: sutra.slug }, props: { sutra } }));
+}
+
+const { sutra } = Astro.props;
+
+const hasScripts = sutraHasScripts(sutra);
+const hant = sutra.variants.hant ?? Object.values(sutra.variants)[0];
+const simp = sutra.variants.simp;
+---
+
+<BaseLayout title={`${sutra.titles.zh} | 靈語堂`} locale="zh" switchPath={`/sutras/${sutra.slug}/`}>
+  <article class="section">
+    <div class="container">
+      <header class="hero" style="padding-block: clamp(2rem, 5vw, 3.25rem) 0;">
+        <h1 class="hero-mark" lang="zh-Hant">{sutra.titles.zh}</h1>
+        <p class="hero-sub">{sutra.titles.en}</p>
+      </header>
+
+      {
+        hasScripts && (
+          <div class="script-toggle" role="group" aria-label="切換繁簡">
+            <button type="button" data-script="hant" aria-pressed="true">繁體</button>
+            <button type="button" data-script="simp" aria-pressed="false">简体</button>
+          </div>
+        )
+      }
+
+      {
+        sutra.image ? (
+          <figure class="calligraphy">
+            <img src={`${import.meta.env.BASE_URL.replace(/\/$/, '')}${sutra.image}`} alt={sutra.image_alt} loading="lazy" width="1280" />
+            <figcaption>{sutra.image_alt}</figcaption>
+          </figure>
+        ) : (
+          <>
+            <div class="scripture" data-script-section="hant" hidden={!hasScripts ? undefined : false}>
+              {'title_pinyin' in hant && hant.title_pinyin && (
+                <p class="pinyin-title">{hant.title_pinyin}</p>
+              )}
+              <Blocks blocks={'blocks' in hant ? (hant.blocks as any) : (hant as any)} lang="zh-Hant" />
+            </div>
+
+            {simp && (
+              <div class="scripture" data-script-section="simp" hidden>
+                {'title_pinyin' in simp && simp.title_pinyin && (
+                  <p class="pinyin-title">{simp.title_pinyin}</p>
+                )}
+                <Blocks blocks={'blocks' in simp ? (simp.blocks as any) : (simp as any)} lang="zh-Hans" />
+              </div>
+            )}
+          </>
+        )
+      }
+
+    </div>
+  </article>
+</BaseLayout>

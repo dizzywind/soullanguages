@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { downloads } from '../data/site';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const sizes: Record<string, string> = {
+  'lianhua-jingangzang-teachings.pdf': '13.1 MB',
+  'she-xin-nei-zheng.pdf': '548 KB',
+};
+---
+
+<BaseLayout title="下載 | 靈語堂" locale="zh" switchPath="/downloads/">
+  <section class="section">
+    <div class="container">
+      <h1 class="section-title">下載</h1>
+      <h2 class="scripture-heading" style="text-align:center">分享</h2>
+      <ul class="download-list">
+        {
+          downloads.map((d) => (
+            <li class="download-item">
+              <div>
+                <h2 lang="zh-Hant">{d.titles.zh}</h2>
+                <p class="meta">{sizes[d.file] ?? 'PDF'}</p>
+              </div>
+              <a class="button" href={`${base}/files/${d.file}`} download>
+                下載 PDF
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

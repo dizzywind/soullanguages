@@ -1,0 +1,22 @@
+---
+import { site, lp, type Locale } from '../data/site';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-brand">{site.name.zh}</div>
+    <div>Soul Languages · 靈語堂 © {year}</div>
+    <nav aria-label={locale === 'zh' ? '頁尾連結' : 'Footer'}>
+      <a href={site.youtubeUrl} target="_blank" rel="noopener">YouTube</a>
+      <a href={`${base}/sitemap-index.xml`}>Sitemap</a>
+      <a href="https://github.com/dizzywind/soullanguages" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </div>
+</footer>
