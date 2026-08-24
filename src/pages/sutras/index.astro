@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { sutras, lp } from '../../data/site';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<BaseLayout title="經文與分享 | 靈語堂" locale="zh" switchPath="/sutras/">
+  <section class="section">
+    <div class="container">
+      <h1 class="section-title">經文與分享</h1>
+      <ul class="card-grid">
+        {
+          sutras.map((s) => (
+            <li>
+              <a class="sutra-card" href={`${base}/sutras/${s.slug}/`}>
+                <span class="num">{String(s.order).padStart(2, '0')}</span>
+                <h2 lang="zh-Hant">{s.titles.zh}</h2>
+                <span class="en-title">{s.titles.en}</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

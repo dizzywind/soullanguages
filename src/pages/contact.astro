@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../data/site';
+---
+
+<BaseLayout title="聯絡我們 | 靈語堂" locale="zh" switchPath="/contact/">
+  <section class="hero">
+    <div class="container prose">
+      <h1 class="hero-mark" lang="zh-Hant">聯絡我們</h1>
+      <p class="hero-sub">Contact</p>
+      <p lang="zh-Hant">歡迎透過 Google 表單與我們聯繫。</p>
+      <hr class="hero-rule" />
+      <a class="button" href={site.contactUrl} target="_blank" rel="noopener">
+        前往聯絡表單
+      </a>
+    </div>
+  </section>
+</BaseLayout>

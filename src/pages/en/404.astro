@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<BaseLayout title="404 | Soul Languages" locale="en" switchPath="/404/">
+  <section class="hero">
+    <div class="container prose">
+      <h1 class="hero-mark">404</h1>
+      <p>Page not found.</p>
+      <hr class="hero-rule" />
+      <a class="button" href={`${base}/en/`}>Back to Home</a>
+    </div>
+  </section>
+</BaseLayout>

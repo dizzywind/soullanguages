@@ -1,0 +1,20 @@
+{
+ "slug": "green-tara-mantra",
+ "order": 2,
+ "titles": {
+  "zh": "綠度母心咒",
+  "en": "Green Tara Heart Mantra"
+ },
+ "variants": {
+  "default": [
+   {
+    "t": "mantra",
+    "text": "嗡。達咧。都達咧。都咧。梭哈。"
+   },
+   {
+    "t": "translit",
+    "text": "Om Tare Tuttare Ture Soha"
+   }
+  ]
+ }
+}

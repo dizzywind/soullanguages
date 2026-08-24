@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import EpisodeGrid from '../../components/EpisodeGrid.astro';
+import { site } from '../../data/site';
+import home from '../../data/content/home.json';
+
+const intro = home.intro.en as string[];
+---
+
+<BaseLayout title="Soul Languages | 靈語堂" locale="en" switchPath="/">
+  <section class="hero">
+    <div class="container prose">
+      <p class="hero-mark" lang="zh-Hant">靈語堂</p>
+      <p class="hero-sub">Soul Languages</p>
+      {intro.map((line) => <p>{line}</p>)}
+      <hr class="hero-rule" />
+      <a class="button" href={site.youtubeUrl} target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.4-1C16.6 3.6 12 3.6 12 3.6h-.1s-4.6 0-7.7.3c-.5.1-1.5.1-2.4 1-.7.7-.8 2.3-.8 2.3S.8 9.1.8 11v1.8c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.6.3 7.6.3s4.6 0 7.7-.4c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8V11c0-1.9-.2-3.8-.2-3.8ZM9.7 15.1V8.3l6.2 3.4-6.2 3.4Z"/></svg>
+        Subscribe on YouTube
+      </a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Soul Languages Series</h2>
+      <EpisodeGrid locale="en" />
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<BaseLayout title="404 | 靈語堂" locale="zh" switchPath="/404/">
+  <section class="hero">
+    <div class="container prose">
+      <h1 class="hero-mark" lang="zh-Hant">404</h1>
+      <p>此頁不存在。</p>
+      <hr class="hero-rule" />
+      <a class="button" href={`${base}/`}>返回主頁</a>
+    </div>
+  </section>
+</BaseLayout>

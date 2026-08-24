@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { sutras } from '../../../data/site';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<BaseLayout title="Sutras | Soul Languages" locale="en" switchPath="/sutras/">
+  <section class="section">
+    <div class="container">
+      <h1 class="section-title">Sutras</h1>
+      <ul class="card-grid">
+        {
+          sutras.map((s) => (
+            <li>
+              <a class="sutra-card" href={`${base}/en/sutras/${s.slug}/`}>
+                <span class="num">{String(s.order).padStart(2, '0')}</span>
+                <h2 lang="zh-Hant">{s.titles.zh}</h2>
+                <span class="en-title">{s.titles.en}</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

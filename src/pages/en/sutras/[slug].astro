@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Blocks from '../../../components/Blocks.astro';
+import { sutras, sutraVariant, sutraHasScripts } from '../../../data/site';
+
+export function getStaticPaths() {
+  return sutras.map((sutra) => ({ params: { slug: sutra.slug }, props: { sutra } }));
+}
+
+const { sutra } = Astro.props;
+
+const hasScripts = sutraHasScripts(sutra);
+// English page: use the EN translation if it exists, else fall back to the Chinese original.
+const en = sutra.variants.en;
+const primary = en ?? sutra.variants.hant ?? Object.values(sutra.variants)[0];
+---
+
+<BaseLayout title={`${sutra.titles.en} | Soul Languages`} locale="en" switchPath={`/sutras/${sutra.slug}/`}>
+  <article class="section">
+    <div class="container">
+      <header class="hero" style="padding-block: clamp(2rem, 5vw, 3.25rem) 0;">
+        <h1 class="hero-mark" lang="zh-Hant">{sutra.titles.zh}</h1>
+        <p class="hero-sub">{sutra.titles.en}</p>
+      </header>
+
+      {
+        sutra.image ? (
+          <figure class="calligraphy">
+            <img src={`${import.meta.env.BASE_URL.replace(/\/$/, '')}${sutra.image}`} alt={sutra.image_alt} loading="lazy" width="1280" />
+            <figcaption>{sutra.image_alt}</figcaption>
+          </figure>
+        ) : (
+          <>
+            <div class:list={["scripture", { 'en-prose': Boolean(en) }]} data-script-section="hant">
+              {'title_pinyin' in primary && primary.title_pinyin && (
+                <p class="pinyin-title">{primary.title_pinyin}</p>
+              )}
+              <Blocks blocks={'blocks' in primary ? (primary.blocks as any) : (primary as any)} lang={en ? 'en' : 'zh-Hant'} />
+            </div>
+
+            {!en && (
+              <p class="note">
+                This text is presently available in Chinese only. Pinyin is provided where the original includes it.
+              </p>
+            )}
+          </>
+        )
+      }
+
+    </div>
+  </article>
+</BaseLayout>
